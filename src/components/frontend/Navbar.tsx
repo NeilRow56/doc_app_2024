@@ -1,9 +1,57 @@
-import React from 'react'
+import Logo from '../dashboard-layout/Logo'
+import { ThemeToggle } from '../dashboard-layout/ThemeToggle'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
-export default function Navbar() {
+function DashboardNavbar() {
+  // Holding userId ready for auth
+  const userId = 'Tommy'
+
+  var myDate = new Date()
+  var hrs = myDate.getHours()
+
+  var greet
+
+  if (hrs < 12) greet = 'Good Morning!'
+  else if (hrs >= 12 && hrs <= 17) greet = 'Good Afternoon!'
+  else if (hrs >= 17 && hrs <= 24) greet = 'Good Evening!'
+
   return (
-    <div>
-      <h2>Navbar</h2>
+    <div className=" flex h-16 w-full  items-center justify-between border border-gray-600  bg-white  px-2 dark:bg-neutral-950 md:px-12  lg:px-60">
+      <div className="flex  items-start  gap-4 text-xl text-primary">
+        <h2
+          className={` hidden bg-gradient-to-r from-orange-800 to-orange-300 bg-clip-text text-2xl font-bold text-transparent lg:block`}
+        >
+          {greet}
+        </h2>
+      </div>
+
+      <div className="items-center space-x-8 px-2 py-1 font-semibold leading-7 text-primary ">
+        <Link className="hover:text-foreground" href="/features">
+          Features
+        </Link>
+        <Link className="hover:text-foreground" href="/marketplace">
+          Marketplace
+        </Link>
+        <Link className="hover:text-foreground" href="/company">
+          Company
+        </Link>
+      </div>
+
+      <div className=" flex  gap-6 ">
+        <ThemeToggle />
+        {userId ? (
+          <Button asChild size="sm" className="px-6  hover:text-slate-900">
+            <Link href="/sign-in">{userId}</Link>
+          </Button>
+        ) : (
+          <Button asChild size="sm" className="px-6  hover:text-slate-900">
+            <Link href="/sign-in">Login</Link>
+          </Button>
+        )}
+      </div>
     </div>
   )
 }
+
+export default DashboardNavbar

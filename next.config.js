@@ -17,9 +17,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'placehold.co',
       },
+
       {
         protocol: 'https',
         hostname: 'instagram.fpnq13-1.fna.fbcdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.tailgrids.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.w3.org',
       },
     ],
   },
