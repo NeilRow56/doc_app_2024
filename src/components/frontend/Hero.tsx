@@ -3,8 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import SearchBar from './SearchBar'
+import TransitionalText from '../TransitionalText'
+import { Pill } from 'lucide-react'
 
 const Hero = () => {
+  const TEXTS = [
+    'Accupuncture',
+    'Massage',
+    'Chiropractor',
+    'Dental',
+    'Dietician',
+    'Occupational Thertapist',
+  ]
   return (
     <>
       <div className=" relative bg-background pb-[110px] pt-[80px] lg:pt-[100px]">
@@ -12,29 +22,29 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
               <div className="w-full">
-                <h1 className="text-dark  mb-5 text-4xl font-bold !leading-[1.208] dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
-                  <span className="mr-2 text-primary">Book your</span>
-                  <span className=" text-gray-400">Therapist</span>
+                <h1 className="text-dark  mb-12 flex flex-wrap items-center gap-3 text-4xl font-bold !leading-[1.208] dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
+                  <span className="mr-2 ">Book your</span>
+                  {/* <TransitionalText className="" TEXTS={TEXTS} /> */}
+                  <span className="text-primary">Dental</span>
                   <br />
                   <span>sessions now</span>
                 </h1>
-                <p className="text-body-color dark:text-dark-6 mb-8 max-w-[480px] text-base">
-                  With TailGrids, business and students thrive together.
-                  Business can perfectly match their staffing to changing demand
-                  throughout the day.
+                <p className="text-body-color dark:text-dark-6 mb-12 max-w-[480px] text-base">
+                  Health shouldn&apos;t be a puzzle. We are offering simple,
+                  affordable, and transparent healtcare.
                 </p>
                 {/* SSearch Bar here */}
 
                 <SearchBar />
 
                 {/* CTA Buttons */}
-                <ul className="mt-8 flex flex-wrap items-center">
+                <ul className="mt-12 flex flex-wrap items-center">
                   <li>
                     <Link
                       href="/#"
                       className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-primary/70 hover:text-slate-900 lg:px-7"
                     >
-                      Get Started
+                      I need a doctor urgently
                     </Link>
                   </li>
                   <li>
@@ -43,38 +53,26 @@ const Hero = () => {
                       className="inline-flex items-center justify-center px-5 py-3 text-center text-base font-medium text-primary  hover:text-slate-600 "
                     >
                       <span className="mr-2">
-                        <svg
-                          width="24"
-                          height="25"
-                          viewBox="0 0 24 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle cx="12" cy="12.6152" r="12" fill="#3758F9" />
-                          <rect
-                            x="7.99893"
-                            y="14.979"
-                            width="8.18182"
-                            height="1.63636"
-                            fill="white"
-                          />
-                          <rect
-                            x="11.2717"
-                            y="7.61523"
-                            width="1.63636"
-                            height="4.09091"
-                            fill="white"
-                          />
-                          <path
-                            d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z"
-                            fill="white"
-                          />
-                        </svg>
+                        <Pill className="h-5 w-5 flex-shrink-0" />
                       </span>
-                      Download App
+                      I need a prescription refill
                     </Link>
                   </li>
                 </ul>
+                <div className="flex gap-4 py-4 pt-8">
+                  <div className="flex flex-col">
+                    <span className="font-bold">600</span>
+                    <span className="text-sm text-muted-foreground">
+                      Active Specialists
+                    </span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center">
+                    <span className="font-bold">1800</span>
+                    <span className="text-sm text-muted-foreground">
+                      Active Patients
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="hidden px-4 lg:block lg:w-1/12"></div>
