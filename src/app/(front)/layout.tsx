@@ -5,13 +5,11 @@ import React, { ReactNode } from 'react'
 function FrontLayout({ children }: { children: ReactNode }) {
   return (
     <div className="bg-muted">
-      <div className="mx-auto w-full ">
-        <Navbar />
-        <div className="mx-auto max-w-7xl py-6">
-          <MegaMenu />
-        </div>
-        {children}
+      <Navbar />
+      <div className=" fixed left-4 top-16 z-50 w-full bg-background py-6 md:left-24 lg:left-64">
+        <MegaMenu />
       </div>
+      {children}
     </div>
   )
 }

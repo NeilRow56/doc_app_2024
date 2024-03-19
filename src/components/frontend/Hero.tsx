@@ -17,11 +17,11 @@ const Hero = () => {
   ]
   return (
     <>
-      <div className=" relative bg-background pb-[110px] pt-[80px] lg:pt-[100px]">
+      <div className="relative mt-20  bg-background pb-[110px] pt-[80px] lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
-              <div className="w-full">
+              <div className="w-full ">
                 <h1 className="text-dark  mb-12 flex flex-wrap items-center gap-3 text-4xl font-bold !leading-[1.208] dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
                   <span className="mr-2 ">Book your</span>
                   {/* <TransitionalText className="" TEXTS={TEXTS} /> */}
@@ -34,8 +34,9 @@ const Hero = () => {
                   affordable, and transparent healtcare.
                 </p>
                 {/* SSearch Bar here */}
-
-                <SearchBar />
+                <div className="justify-start">
+                  <SearchBar />
+                </div>
 
                 {/* CTA Buttons */}
                 <ul className="mt-12 flex flex-wrap items-center">
@@ -59,7 +60,7 @@ const Hero = () => {
                     </Link>
                   </li>
                 </ul>
-                <div className="flex gap-4 py-4 pt-8">
+                <div className="flex gap-4 py-4 pt-12">
                   <div className="flex flex-col">
                     <span className="font-bold">600</span>
                     <span className="text-sm text-muted-foreground">
@@ -134,21 +135,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-const SingleImage = ({ href, imgSrc }: { href: string; imgSrc: string }) => {
-  return (
-    <>
-      <a href={href} className="flex w-full items-center justify-center">
-        <Image
-          src={imgSrc}
-          width="500"
-          height="0"
-          sizes="100vw"
-          alt="hero"
-          priority
-          className="h-auto max-w-full lg:ml-auto"
-        />
-      </a>
-    </>
-  )
-}

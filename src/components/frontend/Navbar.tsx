@@ -3,7 +3,7 @@ import { ThemeToggle } from '../dashboard-layout/ThemeToggle'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 
-function DashboardNavbar() {
+function Navbar() {
   // Holding userId ready for auth
   const userId = 'Tommy'
 
@@ -17,7 +17,7 @@ function DashboardNavbar() {
   else if (hrs >= 17 && hrs <= 24) greet = 'Good Evening!'
 
   return (
-    <div className=" flex h-16 w-full  items-center justify-between border border-gray-600  bg-white  px-2 dark:bg-neutral-950 md:px-12  lg:px-60">
+    <div className=" fixed top-0 z-50 flex h-16 w-full  items-center justify-between border-b border-gray-600  bg-white  px-2 dark:bg-neutral-950 md:px-12  lg:px-60">
       <div className="flex  items-start  gap-4 text-xl text-primary">
         <h2
           className={` hidden bg-gradient-to-r from-orange-800 to-orange-300 bg-clip-text text-2xl font-bold text-transparent lg:block`}
@@ -54,4 +54,4 @@ function DashboardNavbar() {
   )
 }
 
-export default DashboardNavbar
+export default Navbar

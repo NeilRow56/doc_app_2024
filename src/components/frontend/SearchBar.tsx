@@ -4,7 +4,7 @@ import React from 'react'
 export default function SearchBar() {
   return (
     <>
-      <form className="mx-auto max-w-md">
+      <form className=" max-w-md ">
         <label
           htmlFor="default-search"
           className="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
