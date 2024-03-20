@@ -5,6 +5,7 @@ import React from 'react'
 import SearchBar from './SearchBar'
 import TransitionalText from '../TransitionalText'
 import { Pill } from 'lucide-react'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 const Hero = () => {
   const TEXTS = [
@@ -87,7 +88,7 @@ const Hero = () => {
                     sizes="100vw"
                     alt="hero"
                     priority
-                    className="h-auto max-w-full lg:ml-auto"
+                    className="h-auto w-[550px] max-w-full lg:ml-auto"
                   />
                   <span className="absolute -bottom-8 -left-8 z-[-1]">
                     <svg
