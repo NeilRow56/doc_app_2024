@@ -39,7 +39,7 @@ export default function DoctorCard({
   ]
   return (
     <div className="  mt-8 flex max-w-[400px]  flex-col rounded-md border border-gray-200 bg-gray-50 pl-4 pt-4 transition-all duration-300 hover:border-gray-400 hover:bg-gray-100 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-700">
-      <Link href="/">
+      <Link href="/doctors/slug">
         <h2 className="text-2xl font-bold uppercase tracking-widest">
           Vojal Patel, PA-C
         </h2>
@@ -90,7 +90,7 @@ export default function DoctorCard({
           })}
           <Link
             className="m-2 h-8 rounded-sm bg-blue-900  pt-2 text-center text-secondary dark:text-slate-50 "
-            href="/"
+            href="/doctors/slug"
           >
             More times
           </Link>
