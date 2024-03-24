@@ -1,5 +1,5 @@
-import { CardWrapper } from '@/components/frontend/auth/CardWrapper'
-import LoginForm from '@/components/frontend/auth/LoginForm'
+import { LoginForm } from '@/components/frontend/auth/LoginForm'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
