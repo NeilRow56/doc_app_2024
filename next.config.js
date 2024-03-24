@@ -30,6 +30,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.w3.org',
       },
+      {
+        protocol: 'https',
+        hostname: 'unsplash.com',
+      },
     ],
   },
 }

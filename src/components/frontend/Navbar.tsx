@@ -1,11 +1,10 @@
-import Logo from '../dashboard-layout/Logo'
 import { ThemeToggle } from '../dashboard-layout/ThemeToggle'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 
 function Navbar() {
   // Holding userId ready for auth
-  const userId = 'Tommy'
+  const userId = ''
 
   var myDate = new Date()
   var hrs = myDate.getHours()
@@ -46,7 +45,7 @@ function Navbar() {
           </Button>
         ) : (
           <Button asChild size="sm" className="px-6  hover:text-slate-900">
-            <Link href="/sign-in">Login</Link>
+            <Link href="/login">Login</Link>
           </Button>
         )}
       </div>
