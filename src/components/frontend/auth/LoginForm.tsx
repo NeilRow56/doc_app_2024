@@ -60,7 +60,7 @@ export const LoginForm = ({ callbackUrl }: LoginFormProps) => {
     <CardWrapper
       headerLabel="Welcome back"
       backButtonLabel="Don't have an account?"
-      backButtonHref="/login"
+      backButtonHref="/register"
     >
       <Form {...form}>
         <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
