@@ -41,7 +41,7 @@ function Navbar() {
         <ThemeToggle />
         {userId ? (
           <Button asChild size="sm" className="px-6  hover:text-slate-900">
-            <Link href="/sign-in">{userId}</Link>
+            <Link href="/profile">{userId}</Link>
           </Button>
         ) : (
           <Button asChild size="sm" className="px-6  hover:text-slate-900">

@@ -77,14 +77,14 @@ function DashboardNavbar() {
             </div>
             <div className="pt-4">
               <Button asChild size="sm" className="ml-4  px-6 ">
-                <Link href="/sign-in">{userId}</Link>
+                <Link href="/login">{userId}</Link>
               </Button>
             </div>
           </div>
         ) : (
           <div>
             <Button asChild size="sm" className="px-6  ">
-              <Link href="/sign-in">Login</Link>
+              <Link href="/login">Login</Link>
             </Button>
           </div>
         )}
