@@ -15,10 +15,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Search } from 'lucide-react'
 import { Input } from '../ui/input'
 import { ThemeToggle } from './ThemeToggle'
+import { useSession } from 'next-auth/react'
 
 function DashboardNavbar() {
   // Holding userId ready for auth
-  const userId = 'Tommy'
+  const { data: session } = useSession()
+
+  const user = session?.user.firstName
 
   var myDate = new Date()
   var hrs = myDate.getHours()
@@ -46,7 +49,7 @@ function DashboardNavbar() {
       </div>
       <div className=" flex items-center justify-center  gap-6">
         <ThemeToggle />
-        {userId ? (
+        {user ? (
           <div className="flex w-full">
             <div className=" space-x-2">
               <DropdownMenu>
@@ -77,7 +80,7 @@ function DashboardNavbar() {
             </div>
             <div className="pt-4">
               <Button asChild size="sm" className="ml-4  px-6 ">
-                <Link href="/login">{userId}</Link>
+                <Link href="/login">{user}</Link>
               </Button>
             </div>
           </div>

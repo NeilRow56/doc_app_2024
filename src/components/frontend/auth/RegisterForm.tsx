@@ -24,9 +24,11 @@ import { PasswordInput } from './PasswordInput'
 import { RegisterSchema } from '@/schemas'
 import { Button } from '@/components/ui/button'
 import { register } from '@/actions/auth-actions/register'
+import { useRouter } from 'next/navigation'
 
 export const RegisterForm = () => {
   const [isPending, startTransition] = useTransition()
+  const router = useRouter()
 
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
@@ -51,6 +53,7 @@ export const RegisterForm = () => {
           if (data?.success) {
             form.reset()
             toast.success(data.success)
+            router.push('/dashboard')
           }
         })
         .catch(() => toast.error('Something went wrong'))

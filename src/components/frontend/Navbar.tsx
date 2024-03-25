@@ -1,10 +1,14 @@
+import { getServerSession } from 'next-auth'
 import { ThemeToggle } from '../dashboard-layout/ThemeToggle'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { auth, authOptions } from '@/lib/auth'
 
-function Navbar() {
+async function Navbar() {
   // Holding userId ready for auth
-  const userId = ''
+  const session = await getServerSession(authOptions)
+
+  const user = session?.user
 
   var myDate = new Date()
   var hrs = myDate.getHours()
@@ -39,9 +43,9 @@ function Navbar() {
 
       <div className=" flex  gap-6 ">
         <ThemeToggle />
-        {userId ? (
+        {user ? (
           <Button asChild size="sm" className="px-6  hover:text-slate-900">
-            <Link href="/profile">{userId}</Link>
+            <Link href="/profile">{user.firstName}</Link>
           </Button>
         ) : (
           <Button asChild size="sm" className="px-6  hover:text-slate-900">
