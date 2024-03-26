@@ -72,8 +72,8 @@ const footerNavs = [
 
 export default function Footer() {
   return (
-    <footer className="container mx-auto bg-white px-4 py-5 text-gray-500 md:px-8">
-      <div className="mx-auto max-w-5xl space-y-5 px-3 py-5">
+    <footer className="fixed bottom-[-30px]  flex w-full bg-white px-4 py-1 text-gray-500 dark:bg-slate-900 md:px-8">
+      <div className="max-w-8xl mx-auto space-y-1 px-3 py-1">
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
           <div className="space-y-2">
             <h3 className="text-xl font-semibold">DocApp</h3>
