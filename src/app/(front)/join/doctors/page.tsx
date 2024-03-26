@@ -54,7 +54,7 @@ export default function DoctorJoiningPage() {
   return (
     <div className=" h-screen">
       <section>
-        <div className="mx-auto  grid max-w-7xl grid-cols-1  gap-4 p-4 md:grid-cols-2">
+        <div className="mx-auto  grid max-w-7xl grid-cols-1  gap-4 p-4 sm:grid-cols-2">
           <div className="space-y-4">
             <h2 className="text-[1.5rem] font-bold leading-[3.5rem] md:text-[3rem]">
               {' '}
@@ -121,7 +121,7 @@ export default function DoctorJoiningPage() {
                 </p>
               )
             })}
-            <div className=" grid grid-cols-2 gap-4">
+            <div className=" md:grid-cols2 grid grid-cols-1 gap-4">
               {cards.map((card, i) => {
                 return (
                   <div
@@ -146,7 +146,7 @@ export default function DoctorJoiningPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-4xl pb-[80px] pt-6">
+      <section className="mx-auto max-w-3xl px-6 pb-[80px] pt-6">
         <h2 className="text3xl font-bold">FAQ</h2>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
