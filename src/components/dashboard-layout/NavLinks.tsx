@@ -26,13 +26,13 @@ const links = [
   },
   { name: 'Explore', href: '/dashboard/explore', icon: Compass },
   {
-    name: 'Reels',
-    href: '/dashboard/reels',
+    name: 'Orders',
+    href: '/dashboard/orders',
     icon: Clapperboard,
   },
   {
-    name: 'Messages',
-    href: '/dashboard/messages',
+    name: 'Products',
+    href: '/dashboard/products',
     icon: MessageCircle,
   },
   {

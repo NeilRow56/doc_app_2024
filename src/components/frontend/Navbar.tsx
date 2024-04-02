@@ -41,7 +41,7 @@ async function Navbar() {
         </Link>
       </div>
 
-      <div className=" flex  gap-6 ">
+      <div className=" flex  gap-6 pr-16">
         <ThemeToggle />
         {user ? (
           <Button asChild size="sm" className="px-6  hover:text-slate-900">
