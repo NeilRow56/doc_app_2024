@@ -3,6 +3,7 @@ import Brands from '@/components/frontend/Brands'
 import DoctorsList from '@/components/frontend/DoctorsList'
 import Hero from '@/components/frontend/Hero'
 import MegaMenu from '@/components/frontend/MegaMenu'
+import Pricing from '@/components/frontend/Pricing'
 import TabbedServices from '@/components/frontend/TabbedServices'
 
 export default async function LandingPage() {
@@ -23,6 +24,7 @@ export default async function LandingPage() {
         title="In-person doctor vist"
         isInPerson={true}
       />
+      <Pricing />
     </section>
   )
 }
