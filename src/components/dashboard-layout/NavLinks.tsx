@@ -24,15 +24,15 @@ const links = [
     icon: Search,
     hideOnMobile: true,
   },
-  { name: 'Explore', href: '/dashboard/explore', icon: Compass },
+  { name: 'Doctors', href: '/join/doctors', icon: Compass },
   {
-    name: 'Orders',
-    href: '/dashboard/orders',
+    name: 'Medication',
+    href: '/dashboard/medication',
     icon: Clapperboard,
   },
   {
-    name: 'Products',
-    href: '/dashboard/products',
+    name: 'Appontments',
+    href: '/dashboard/appointments',
     icon: MessageCircle,
   },
   {

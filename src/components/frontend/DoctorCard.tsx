@@ -80,7 +80,7 @@ export default function DoctorCard({
               <Link
                 className="m-2 h-8 rounded-sm bg-blue-600  px-2 pt-2 text-center text-secondary dark:text-slate-50"
                 key={i}
-                href="/"
+                href="/doctors/slug"
               >
                 {' '}
                 {item.time}
