@@ -18,6 +18,11 @@ enum UserRole {
   ADMIN
   DOCTOR
 }
+enum DoctorRole {
+  
+  ADMIN
+  DOCTOR
+}
 
 model User {
  id              String @id @default(auto()) @map("_id") @db.ObjectId
@@ -35,6 +40,24 @@ model User {
  colorScheme     String        @default("theme-orange")
  accounts        Account[]
  sessions        Session[]
+ createdAt       DateTime @default(now())
+ updatedAt       DateTime @updatedAt
+ 
+}
+model Doctor {
+ id              String @id @default(auto()) @map("_id") @db.ObjectId
+ firstName       String
+ lastName        String 
+ role            DoctorRole   @default(DOCTOR)
+ bio             String?
+ phone           String? 
+ gender          String?
+ email           String   @unique 
+ active          Boolean  @default(false)
+ emailVerified   DateTime?
+ imageUrl        String? 
+ password        String
+ 
  createdAt       DateTime @default(now())
  updatedAt       DateTime @updatedAt
  

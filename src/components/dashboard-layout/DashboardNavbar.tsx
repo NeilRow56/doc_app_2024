@@ -21,7 +21,7 @@ function DashboardNavbar() {
   // Holding userId ready for auth
   const { data: session } = useSession()
 
-  const user = session?.user.firstName
+  const user = session?.user
 
   var myDate = new Date()
   var hrs = myDate.getHours()
@@ -33,21 +33,21 @@ function DashboardNavbar() {
   else if (hrs >= 17 && hrs <= 24) greet = 'Good Evening!'
 
   return (
-    <div className="flex h-16 w-full items-center justify-between  border  border-gray-600  bg-white px-2 dark:bg-neutral-950  md:px-12 lg:px-48">
+    <div className="flex h-16 w-full items-center justify-between  border  border-gray-600  bg-white px-2 dark:bg-neutral-950  md:px-4 lg:px-8 xl:px-24">
       <div className="">
         <div>
           <p className="text-xl text-primary">{greet}</p>
         </div>
       </div>
-      <div className="relative hidden sm:block ">
-        <Search className="absolute left-4 top-3 h-4 w-4 text-muted-foreground" />
+      <div className="relative hidden lg:block ">
+        <Search className="absolute left-4 top-3 hidden h-4 w-4 text-muted-foreground lg:block" />
         <Input
           placeholder="Search"
           name="search"
           className="primary/40 rounded-lg pl-10 dark:border-gray-300"
         />
       </div>
-      <div className=" flex items-center justify-center  gap-6">
+      <div className=" flex  items-center   gap-6 pr-6">
         <ThemeToggle />
         {user ? (
           <div className="flex w-full">
@@ -68,19 +68,21 @@ function DashboardNavbar() {
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <Link href="/hotel/new">New</Link>
+                    <h2>{user.email}</h2>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <Link href="/dashboard">Dashboard</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Link href="/edgestore">edgestore</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem>Team</DropdownMenuItem>
-                  <DropdownMenuItem>Subscription</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
             <div className="pt-4">
               <Button asChild size="sm" className="ml-4  px-6 ">
-                <Link href="/login">{user}</Link>
+                <Link href="/login">{user.firstName}-active</Link>
               </Button>
             </div>
           </div>

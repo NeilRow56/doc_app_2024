@@ -42,8 +42,8 @@ const links = [
     hideOnMobile: true,
   },
   {
-    name: 'Create',
-    href: '/dashboard/create',
+    name: 'Get Started',
+    href: '/dashboard/createPlan?role=DOCTOR@plan=free',
     icon: PlusSquare,
   },
   {
